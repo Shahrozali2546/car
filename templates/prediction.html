@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title  %}Predicition{% endblock title %}
+
+{% block body %}
+<section class='container'>
+  <h1 class='text-center text-success'>Car Price Predicition</h1>
+  <p class='text-center'>
+    Car Pirce model predict for Machine Learning Model to provide a good aacuracy.
+  </p>
+  <br>
+  <h2 class='text-center'><b>
+    {% if output %}
+    <h2 class='text-success'>Car Price Prediction: {{output}}</h2>
+    {% endif %}
+  </b></h2>
+<form method='POST',action='/prediction' class="row g-3">
+  {% csrf_token %}
+    <div class="col-md-6">
+      <label for="inputpassword4" class="form-label">Choose Car Brand Name</label>
+      <select id='name' name='name' class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">Ford</option>
+        <option value="2">Chevrolet</option>
+        <option value="3">Hyundai</option>
+        <option value="4">Mahindra</option>
+        <option value="5">Maruti</option>
+        <option value="6">Renault</option>
+        <option value="7">Tata</option>
+        <option value="8">Toyota</option>
+        <option value="9">Volkswagen</option>
+      </select>
+  </div>
+      
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Enter year</label>
+      <input type="year" id='year' name='year' class="form-control">
+    </div>
+    <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Enter km_driven</label>
+        <input type="year" id='km' name='km_driven' class="form-control">
+      </div>
+  
+    <div class="col-md-6">
+        <label for="inputCity" class="form-label">Select fuel types</label>
+        <select id='fuel' name='fuel' class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Diesel</option>
+            <option value="2">Petrol</option>
+            <option value="3">CNG</option>
+            <option value="4">LPG</option>
+          </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Select Seller Type</label>
+        <select id='seller' name='seller_type' class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Individual</option>
+            <option value="2">Dealer</option>
+            <option value="3">Trustmark Dealer</option>
+          </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Select Transmission</label>
+        <select id='transmission' name='transmission' class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Automatic</option>
+            <option value="2">Manual</option>
+          </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Select Owner types</label>
+        <select id='owner' name='owner' class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="0">First Owner</option>
+            <option value="2">Second Owner</option>
+            <option value="4">Third Owner</option>
+            <option value="1">Fourth and Above Owner</option>
+            <option value="3">Test Drive Car</option>
+          </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Enter Car Seats</label>
+        <input type="text" id='seat' name='seats' class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Enter Max Power</label>
+        <input type="text" id='power' name='max_power' class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Select Mileage Unit types</label>
+        <select id='MileageUnit' name='MileageUnit' class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">kmpl</option>
+            <option value="2">km/kg</option>
+          </select>
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Enter Mileage</label>
+        <input type="text" id='Mileage' name='Mileage' class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Enter Car Engine(CC) </label>
+        <input type="text" id='Engine' name='Engine' class="form-control" id="inputCity">
+      </div>
+    <div class="col-12 my-4 text-center">
+      <button type="submit" class="btn btn-warning btn-lg text-center">Button</button>
+    </div>
+  </form>
+</section>
+
+{% endblock body %}

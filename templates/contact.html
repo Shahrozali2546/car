@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title  %}Contact{% endblock title %}
+
+
+{% block content %}
+<div class="container mt-5 ">
+    <!-- Contact Us Section Title -->
+    <div class="text-center mb-5">
+        <h1 class="text-center text-success">Get in Touch</h1>
+        <p class="lead text-muted">We would love to hear from you! Feel free to send us a message, and we'll get back to you as soon as possible.</p>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-light">
+                <div class="card-body">
+                    <h3 class="card-title text-center text-primary mb-4">Contact Form</h3>
+                    <form action="{% url 'contact' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <div class='text-center text-success'>
+                        <button type="submit" class="btn btn-success btn-block py-2">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="row justify-content-center mt-5 my-5">
+        <div class="col-md-4 text-center">
+            <h4 class="text-success">Our Location</h4>
+            <p>Moulana Shoukat Ali Road, Johar Town, Lahore</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h4 class="text-success">Get in Touch</h4>
+            <p>Phone: <a href="tel:+923107635336" class="text-dark">+923107635336</a></p>
+        </div>
+        <div class="col-md-4 text-center">
+            <h4 class="text-success">Follow Us</h4>
+            <div class="d-flex justify-content-center mt-3">
+                <a href="https://facebook.com/carprice" target="_blank" class="btn btn-outline-primary btn-lg mx-2">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://twitter.com/carprice" target="_blank" class="btn btn-outline-info btn-lg mx-2">
+                    <i class="bi bi-twitter"></i> Twitter
+                </a>
+                <a href="https://instagram.com/carprice" target="_blank" class="btn btn-outline-danger btn-lg mx-2">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

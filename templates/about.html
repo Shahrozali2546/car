@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title  %}About{% endblock title %}
+
+
+
+{% block content %}
+<div class="container mt-5 ">
+    <!-- About Section Title -->
+    <div class="text-center mb-4">
+        <h1 class="text-center text-success">About Us</h1>
+        <p class="lead">Welcome to the Car Price Prediction Model! Here, we aim to assist you in making informed decisions by predicting accurate car prices based on various factors.</p>
+    </div>
+
+    <!-- How Our Model Works Section -->
+    <div class="row">
+        <div class="col-md-6 fs-5">
+            <h3 class='text-success'>How Our Model Works</h3>
+            <p>Our Car Price Prediction Model uses advanced machine learning algorithms to predict car prices based on various input features.</p>
+            <ul>
+                <li><strong class='text-danger'>Car Make & Model:</strong> Different car brands and models have different market values.</li>
+                <li><strong class='text-danger'>Year of Manufacture:</strong> Older cars generally have lower market prices.</li>
+                <li><strong class='text-danger'>Mileage:</strong> Lower mileage typically indicates higher value.</li>
+                <li><strong class='text-danger'>Car Condition:</strong> A well-maintained car holds higher value.</li>
+                <li><strong class='text-danger'>Location:</strong> Car prices can vary by region.</li>
+                <li><strong class='text-danger'>Additional Features:</strong> Features like sunroof or leather seats can increase the price.</li>
+            </ul>
+        </div>
+        <div class="col-md-6 fs-5">
+            
+            <div class="card">
+            <div class="card-body">
+                    <h5 class="card-title text-success">Predict Car Prices with Confidence</h5>
+                    <p class="card-text">Our model helps you assess the value of any car with accuracy, whether you're buying or selling. Get started now to make better decisions!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="row mt-5 fs-5">
+        <div class="col-12">
+            <h3 class="text-center text-success">Why Choose Us?</h3>
+            <p class="text-center">Our Car Price Prediction Model is built using the latest data-driven techniques to ensure the most accurate car price predictions. We provide:</p>
+        </div>
+    </div>
+    
+    <div class="row fs-5">
+        <!-- Features Cards -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-database fa-3x mb-3"></i>
+                    <h5 class="card-title text-danger">Data-Driven Predictions</h5>
+                    <p class="card-text">We use real-world data and machine learning to provide accurate car price predictions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fs-5">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-cogs fa-3x mb-3"></i>
+                    <h5 class="card-title text-danger">Advanced Algorithms</h5>
+                    <p class="card-text">Our model leverages advanced machine learning techniques for precise and reliable results.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 fs-5">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-handshake fa-3x mb-3"></i>
+                    <h5 class="card-title text-danger">Transparency and Trust</h5>
+                    <p class="card-text">We are committed to providing fair and transparent pricing with every prediction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="row mt-5 my-3 fs-5">
+        <div class="col-12 text-center">
+            <h3 class='text-success'>Contact Us</h3>
+            <p>If you have any questions or need assistance, feel free to reach out to our team. We're here to help!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
